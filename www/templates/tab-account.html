@@ -1,0 +1,16 @@
+
+<ion-view view-title="Settings">
+  <ion-content  style="background-color:#ffecb3">
+<a ng-click="helpmodal.show()"><h3 align='center' style="color:#42a5f5">Help <i class="icon ion-help-circled"></i></h3></a>
+
+<ion-list ng-repeat="doc in documents">
+    <ion-item>
+    <h3 style="color:#42a5f5" >{{doc.title}}</h3>
+    <p style="color:#42a5f5" >{{doc.desc}} </p>
+    <ion-option-button class="button-assertive" ng-click="openLogin(doc.IdKey)" >Delete</ion-option-button>
+  </ion-item>
+
+</ion-list>
+
+  </ion-content>
+</ion-view>

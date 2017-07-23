@@ -1,0 +1,36 @@
+<style type="text/css">
+   .inputbox{
+   width: 100%;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+  }
+</style>
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Allow Permission</h1>
+    <div class="buttons">
+       <button class="button button-clear button-positive" ng-click="loginmodal.hide()"><i class="ion-ios-close-outline"></i> Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content style="padding-top:100px;background-color:#ffecb3;">
+    <ion-list>
+<form ng-submit="doLogin(deleteAc); Login.$setPristine(); " name="Login">
+
+  <label class="item item-input ">
+    <span class="input-label" style="color:#42a5f5" >Password <i class="icon ion-android-lock"></i></span> 
+     <input type="password" class ="inputbox" required name="username" placeholder="Password" ng-model="loginData.pwd"   maxlength="15" >
+  </label>
+
+    <label class="item item-input ">
+    <span class="input-label" style="color:#42a5f5">Secret Key <i class="icon ion-key"></i></span>
+   <input type="password" class ="inputbox" required name="password" placeholder="Secret Key" ng-model="loginData.key">
+       
+  </label>
+
+          <button ng-disabled="Login.$invalid"  class="button button-block button-assertive" type="submit">Continue</button>
+</form>
+    </ion-list>
+  </ion-content>
+</ion-modal-view>

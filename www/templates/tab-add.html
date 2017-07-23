@@ -1,0 +1,42 @@
+<ion-view view-title="Add Account">
+  <ion-content  style="background-color:#ffecb3">
+    
+    <ion-list>
+ <form ng-submit="addAccount();  Register.$setPristine();" name="Register">
+
+  <label class="item item-input ">
+    <span class="input-label" style="color:#42a5f5" >Account <i class="icon ion-android-star-half"></i> </span> 
+    <input type="text" placeholder="Account Name" required ng-model="register.title" name="title">
+  </label>
+  
+    <label class="item item-input ">
+    <span class="input-label" style="color:#42a5f5">Details <i class="icon ion-card"></i></span>
+    <input type="text" placeholder="Optional" ng-model="register.desc" >
+  </label>
+
+
+  <label class="item item-input ">
+    <span class="input-label" style="color:#42a5f5">Password <i class="icon ion-android-lock"></i></span>
+    <input type="password" placeholder="Password" required ng-model="register.password" name="pwd">
+       
+  </label>
+
+  <label class="item item-input ">
+    <span class="input-label" style="color:#42a5f5">Secret Key <i class="icon ion-key"></i></span>
+    <input type="password" name="rpwd" placeholder="Your unique Secret key" required ng-model="register.rsecretkey">
+       
+  </label>
+  
+  <label class="item item-input ">
+    <span class="input-label"style="color:#42a5f5">Secret Key <i class="icon ion-key"></i></span>
+    <input name="key" type="password" placeholder="Re-type Secret Key" required ng-model="register.secretkey" >
+        
+  </label>
+
+  <button type="submit" ng-disabled="Register.$invalid" class="button button-block button-balanced">
+  Add
+</button>
+ </form>
+    </ion-list>
+  </ion-content>
+</ion-view>

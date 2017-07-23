@@ -1,0 +1,35 @@
+<ion-view view-title="Dashboard">
+  <ion-content class="padding" style="padding-top:75px; background-color:#ffecb3 ">
+    <h2 align='center' style="color:#42a5f5"><i class="ion-lock-combination"></i> Password-Vault</h2>
+    
+
+ <ion-list>
+<form name="ChooseAc" ng-submit="doRetrieve(); ChooseAc.$setPristine();">
+  <label class="item item-input item-select">
+    <div class="input-label">
+    <h3 style="color:#42a5f5" >  Account  <i class="icon ion-android-star-half"></i></h3> 
+    </div>
+    <select ng-model="Ac.selectedId" name="ac" required>
+      <option ng-repeat="doc in documents" value="{{doc.IdKey}}"><h2 style="color:#42a5f5" >{{doc.title}}</h2></option>
+    </select>
+          <h5 style="color:red"  ng-show="ChooseAc.ac.$error.required && !ChooseAc.ac.$pristine">* Required Field </h5>
+  </label>
+
+  <div class="item item-input-inset">
+    <label class="item-input-wrapper">
+      <input ng-model="Ac.providedkey" name="key" required type="password" placeholder="Secret Key">
+      <h5 style="color:red"  ng-show="ChooseAc.key.$error.required && !ChooseAc.key.$pristine">* Required Field </h5>
+    </label>
+    <button type="submit" ng-disabled="ChooseAc.$invalid" class="button button-small button-calm">
+      Submit
+    </button>
+  </div>
+</form>
+
+<button ng-click="erasepwd()" ng-show="showpwd" class="button button-full button-assertive">
+  {{resultpassword}}
+</button>
+
+</ion-list>
+</ion-content>
+</ion-view>
