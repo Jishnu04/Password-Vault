@@ -126,6 +126,9 @@ $scope.addAccount =function(){
                            title: 'Account Removed',
                          })
                           .then(function(){
+                                $scope.loginData={'key':"",
+                                                  'pwd':"",
+                                                  'removeId':""};
                             $scope.closeLogin();
                           });
                        
